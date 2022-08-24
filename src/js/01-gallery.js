@@ -35,13 +35,12 @@ return galleryItems
     .join('');
 }
 
-imageContainer.addEventListener('click', onGalleryClick);
+galleryContainer.addEventListener("click", onModalMarkup);
 
-function onGalleryClick(event) {
-    event.preventDefault();
-    const onImgClick = event.target.classList.contains('.gallery__image');
-    if (!onImgClick) {
-        return;
+function onModalMarkup(evt) {
+    evt.preventDefault();
+        if (!evt.target.classList.contains("gallery__image")) {
+    return;
     }
 }
 
